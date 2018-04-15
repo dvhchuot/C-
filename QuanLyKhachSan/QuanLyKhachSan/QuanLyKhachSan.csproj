@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5C28CBFD-AE17-4BAB-9AD2-AF834F78850B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QuanLyKhachSan</RootNamespace>
+    <AssemblyName>QuanLyKhachSan</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.21, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\dll\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="data\Connectsql.cs" />
+    <Compile Include="data\dataPhong.cs" />
+    <Compile Include="data\Login.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserForm\ChiTietPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForm\ChiTietPhong.Designer.cs">
+      <DependentUpon>ChiTietPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForm\DanhSachNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForm\DanhSachNhanVien.designer.cs">
+      <DependentUpon>DanhSachNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForm\DatPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForm\DatPhong.Designer.cs">
+      <DependentUpon>DatPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForm\DichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForm\DichVu.designer.cs">
+      <DependentUpon>DichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForm\DichVuTungPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForm\DichVuTungPhong.Designer.cs">
+      <DependentUpon>DichVuTungPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForm\DoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForm\DoiMatKhau.Designer.cs">
+      <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForm\HoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForm\HoaDon.Designer.cs">
+      <DependentUpon>HoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForm\KhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForm\KhachHang.Designer.cs">
+      <DependentUpon>KhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForm\login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForm\login.designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForm\Phong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForm\Phong.Designer.cs">
+      <DependentUpon>Phong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForm\test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForm\test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForm\ThongTinNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForm\ThongTinNhanVien.Designer.cs">
+      <DependentUpon>ThongTinNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForm\TrangThaiPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForm\TrangThaiPhong.Designer.cs">
+      <DependentUpon>TrangThaiPhong.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UserForm\ChiTietPhong.resx">
+      <DependentUpon>ChiTietPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForm\DanhSachNhanVien.resx">
+      <DependentUpon>DanhSachNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForm\DatPhong.resx">
+      <DependentUpon>DatPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForm\DichVu.resx">
+      <DependentUpon>DichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForm\DichVuTungPhong.resx">
+      <DependentUpon>DichVuTungPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForm\DoiMatKhau.resx">
+      <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForm\HoaDon.resx">
+      <DependentUpon>HoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForm\KhachHang.resx">
+      <DependentUpon>KhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForm\login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForm\Phong.resx">
+      <DependentUpon>Phong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForm\ThongTinNhanVien.resx">
+      <DependentUpon>ThongTinNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForm\TrangThaiPhong.resx">
+      <DependentUpon>TrangThaiPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon\121.ico" />
+    <Content Include="Icon\146.png" />
+    <Content Include="Icon\54.ico" />
+    <Content Include="Icon\6.jpg" />
+    <Content Include="Icon\add.png" />
+    <Content Include="Icon\add1.png" />
+    <Content Include="Icon\add2.png" />
+    <Content Include="Icon\add3.png" />
+    <Content Include="Icon\add_48.png" />
+    <Content Include="Icon\add_481.png" />
+    <Content Include="Icon\AGENDA.png" />
+    <Content Include="Icon\book_481.png" />
+    <Content Include="Icon\cancel_48.png" />
+    <Content Include="Icon\cleaner.jpg" />
+    <Content Include="Icon\clock.JPG" />
+    <Content Include="Icon\cup_coffee-48.png" />
+    <Content Include="Icon\designfloat_48.png" />
+    <Content Include="Icon\dondep.jpg" />
+    <Content Include="Icon\Dossiers WLM.png" />
+    <Content Include="Icon\down.png" />
+    <Content Include="Icon\feedburner_48.png" />
+    <Content Include="Icon\find.png" />
+    <Content Include="Icon\floppy_disk_48.png" />
+    <Content Include="Icon\floppy_disk_481.png" />
+    <Content Include="Icon\floppy_disk_482.png" />
+    <Content Include="Icon\floppy_disk_483.png" />
+    <Content Include="Icon\HelpHelp.png" />
+    <Content Include="Icon\Home.png" />
+    <Content Include="Icon\home_48.png" />
+    <Content Include="Icon\home_481.png" />
+    <Content Include="Icon\ICO-Symbol-Refresh.ico-48x48.png" />
+    <Content Include="Icon\iconcleanmaster.png" />
+    <Content Include="Icon\LaST %28Cobalt%29 RTF File.png" />
+    <Content Include="Icon\lock_48.png" />
+    <Content Include="Icon\lock_open_48.png" />
+    <Content Include="Icon\Login Manager.png" />
+    <Content Include="Icon\Login1.png" />
+    <Content Include="Icon\login2.png" />
+    <Content Include="Icon\myspace.png" />
+    <Content Include="Icon\NhaCungUng.png" />
+    <Content Include="Icon\NhaCungUng1.png" />
+    <Content Include="Icon\Ok.png" />
+    <Content Include="Icon\Ok1.png" />
+    <Content Include="Icon\paper&amp;pencil_48.png" />
+    <Content Include="Icon\phongsuachua.jpg" />
+    <Content Include="Icon\printer.png" />
+    <Content Include="Icon\printer1.png" />
+    <Content Include="Icon\printer2.png" />
+    <Content Include="Icon\questionmark_48.png" />
+    <Content Include="Icon\refresh_48.png" />
+    <Content Include="Icon\refresh_481.png" />
+    <Content Include="Icon\reload.png" />
+    <Content Include="Icon\reload_24.png" />
+    <Content Include="Icon\reload_241.png" />
+    <Content Include="Icon\reload_242.png" />
+    <Content Include="Icon\remove.png" />
+    <Content Include="Icon\remove1.png" />
+    <Content Include="Icon\remove2.png" />
+    <Content Include="Icon\remove3.png" />
+    <Content Include="Icon\Restore.bmp" />
+    <Content Include="Icon\save.png" />
+    <Content Include="Icon\save1.png" />
+    <Content Include="Icon\save2.png" />
+    <Content Include="Icon\save3.png" />
+    <Content Include="Icon\search_48.png" />
+    <Content Include="Icon\stop.png" />
+    <Content Include="Icon\stop1.png" />
+    <Content Include="Icon\stop2.png" />
+    <Content Include="Icon\stop3.png" />
+    <Content Include="Icon\stop4.png" />
+    <Content Include="Icon\TDV.bmp" />
+    <Content Include="Icon\Thoat.png" />
+    <Content Include="Icon\Thoat1.png" />
+    <Content Include="Icon\ThongKe.gif" />
+    <Content Include="Icon\ThongKe1.gif" />
+    <Content Include="Icon\tool.jpg" />
+    <Content Include="Icon\users_two_48.png" />
+    <Content Include="Icon\users_two_481.png" />
+    <Content Include="Icon\user_48.png" />
+    <Content Include="Icon\user_add_481.png" />
+    <Content Include="Icon\vault.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
