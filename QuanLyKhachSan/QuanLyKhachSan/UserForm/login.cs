@@ -9,11 +9,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using QuanLyKhachSan.LoginService;
 namespace QuanLyKhachSan.UserForm
 {
     public partial class login : Form
     {
+        
         public login()
         {
             InitializeComponent();
@@ -28,30 +29,30 @@ namespace QuanLyKhachSan.UserForm
         {
             string tk = Txt_tk.Text;
             string mk = txt_mk.Text;
-            SqlConnection kn = new SqlConnection(Connectsql.connectionsql);
-            kn.Open();
-            string sql = "SELECT nv.CHUCVU, ht.USENAME FROM dbo.HETHONG ht, dbo.NHANVIEN nv WHERE ht.MA_NV=nv.MA_NV AND ht.USENAME='"+tk+"' AND ht.PASSWORD='"+mk+"'";
-            //MessageBox.Show(sql);
-
-            SqlCommand commandsql = new SqlCommand(sql, kn);
-
-            SqlDataAdapter com = new SqlDataAdapter(commandsql);
-            DataTable data = new DataTable();
-            com.Fill(data);
-            if(data.Rows.Count>0)
+            LoginApiClient loginService = new LoginApiClient();
+            account account = new account();
+            try
             {
-                Login.usename = tk;
-                Login.chucvu = data.Rows[0][0].ToString();
-                Login.pass = mk;
-                Form1 f = new Form1();
-                this.Hide();
-                f.ShowDialog();
-               
+                account = loginService.Login(tk, mk);
+                if (account.Username != null && account.Password != null)
+                {
+                    Login.usename = account.Username;
+                    Login.pass = account.Password;
+                    Login.chucvu = account.NhanVien.Chucvu;
+                    Form1 f = new Form1();
+                    this.Hide();
+                    f.ShowDialog();
+                }
+
+                else
+                {
+                    MessageBox.Show("tài khoản hoặc mk sai");
+                    txt_mk.Text = "";
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Tài khoản hoặc mk sai");
-                txt_mk.Text = "";
+                MessageBox.Show("Kết nối service thất bại! Vui lòng thử lại.");
             }
         }
     }

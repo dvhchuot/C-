@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7f05d413-7740-42f3-9ce4-bf1251fd368f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:50114/LoginApi.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="LoginApi.xsd" MetadataType="Schema" ID="c68dbffe-1cf6-418e-9289-c3cf6ecb0ad7" SourceId="1" SourceUrl="http://localhost:50114/LoginApi.svc?xsd=xsd1" />
+    <MetadataFile FileName="LoginApi1.xsd" MetadataType="Schema" ID="55d8a153-2054-464e-857a-bc8e5e4d5b0f" SourceId="1" SourceUrl="http://localhost:50114/LoginApi.svc?xsd=xsd0" />
+    <MetadataFile FileName="LoginApi.disco" MetadataType="Disco" ID="0866bf21-b92e-4fd1-a440-6b5f8112d33c" SourceId="1" SourceUrl="http://localhost:50114/LoginApi.svc?disco" />
+    <MetadataFile FileName="LoginApi.wsdl" MetadataType="Wsdl" ID="9e405a18-b59f-4e26-8736-f688376dd55a" SourceId="1" SourceUrl="http://localhost:50114/LoginApi.svc?wsdl" />
+    <MetadataFile FileName="LoginApi2.xsd" MetadataType="Schema" ID="b4fcb120-a590-455e-a675-f4e7e4a4e550" SourceId="1" SourceUrl="http://localhost:50114/LoginApi.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

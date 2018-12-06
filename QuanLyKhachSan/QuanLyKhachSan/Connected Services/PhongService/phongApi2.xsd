@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:50114/phongApi.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfServiceHotelManager.Entity" />
+  <xs:element name="getListPhong">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id_lp" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getListPhongResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WcfServiceHotelManager.Entity" minOccurs="0" name="getListPhongResult" nillable="true" type="q1:ArrayOfphong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPhongById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idPhong" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPhongByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WcfServiceHotelManager.Entity" minOccurs="0" name="getPhongByIdResult" nillable="true" type="q2:chitietdatphong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPhieuDatPhongById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idPdp" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPhieuDatPhongByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WcfServiceHotelManager.Entity" minOccurs="0" name="getPhieuDatPhongByIdResult" nillable="true" type="q3:chitietdatphong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ktraPhong">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idPhong" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ktraPhongResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ktraPhongResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getDichVuPdp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idPdp" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getDichVuPdpResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WcfServiceHotelManager.Entity" minOccurs="0" name="getDichVuPdpResult" nillable="true" type="q4:ArrayOfchitietdichvu" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="traphong">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idPdp" type="xs:int" />
+        <xs:element minOccurs="0" name="tongtien" type="xs:double" />
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idp" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="traphongResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="traphongResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getListDichVu">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getListDichVuResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WcfServiceHotelManager.Entity" minOccurs="0" name="getListDichVuResult" nillable="true" type="q5:ArrayOfdichvu" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="themdv">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="iddv" type="xs:int" />
+        <xs:element minOccurs="0" name="idpdp" type="xs:int" />
+        <xs:element minOccurs="0" name="soluong" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="themdvResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="themdvResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getLoaidichvu">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getLoaidichvuResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WcfServiceHotelManager.Entity" minOccurs="0" name="getLoaidichvuResult" nillable="true" type="q6:ArrayOfloaidichvu" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updatedv">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WcfServiceHotelManager.Entity" minOccurs="0" name="dv" nillable="true" type="q7:dichvu" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updatedvResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="updatedvResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="xoadv">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="xoadvResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xoadvResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

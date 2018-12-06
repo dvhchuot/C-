@@ -65,7 +65,7 @@
             this.Txt_tk.Name = "Txt_tk";
             this.Txt_tk.Size = new System.Drawing.Size(207, 22);
             this.Txt_tk.TabIndex = 2;
-            this.Txt_tk.Text = "HT08";
+            this.Txt_tk.Text = "admin";
             // 
             // txt_mk
             // 

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5551f30d-3104-4e2a-b6ba-327dedfda245" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:50114/phongApi.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="phongApi.xsd" MetadataType="Schema" ID="d3dbd191-0912-4b91-89f1-aa1b44deaca5" SourceId="1" SourceUrl="http://localhost:50114/phongApi.svc?xsd=xsd2" />
+    <MetadataFile FileName="phongApi.disco" MetadataType="Disco" ID="e5e50cd0-aa1d-49e4-8733-5afbc43e111c" SourceId="1" SourceUrl="http://localhost:50114/phongApi.svc?disco" />
+    <MetadataFile FileName="phongApi1.xsd" MetadataType="Schema" ID="9a019519-b3a9-4bac-8b98-501969dbc487" SourceId="1" SourceUrl="http://localhost:50114/phongApi.svc?xsd=xsd1" />
+    <MetadataFile FileName="phongApi2.xsd" MetadataType="Schema" ID="8cba9c5e-a313-489b-865c-8890209c435d" SourceId="1" SourceUrl="http://localhost:50114/phongApi.svc?xsd=xsd0" />
+    <MetadataFile FileName="phongApi.wsdl" MetadataType="Wsdl" ID="feb70dfd-bbc5-4853-a792-0e2c4e751379" SourceId="1" SourceUrl="http://localhost:50114/phongApi.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

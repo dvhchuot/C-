@@ -80,7 +80,7 @@ namespace QuanLyKhachSan.UserForm
             
         }
         public static string MaPhong;
-
+        public static int idp;
         private void DatPhong_Load(object sender, EventArgs e)
         {
             lb_mp.Text = MaPhong;
@@ -93,8 +93,8 @@ namespace QuanLyKhachSan.UserForm
 
         private void bt_luu_Click(object sender, EventArgs e)
         {
-            string mpdp = txt_phieudat.Text;
-            string mkh = txt_mkh.Text;
+            string mpdp = "";
+            string mkh = "";
             string hoten = txt_ten.Text;
             string gt = "-1";
             if (rd_nam.Checked == true) gt = "1";

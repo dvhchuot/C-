@@ -1,0 +1,14 @@
+D:\Bt\WcfServiceHotelManager\WcfServiceHotelManager\bin\WcfServiceHotelManager.dll.config
+D:\Bt\WcfServiceHotelManager\WcfServiceHotelManager\bin\WcfServiceHotelManager.dll
+D:\Bt\WcfServiceHotelManager\WcfServiceHotelManager\bin\WcfServiceHotelManager.pdb
+D:\Bt\WcfServiceHotelManager\WcfServiceHotelManager\obj\Debug\WcfServiceHotelManager.csprojAssemblyReference.cache
+D:\Bt\WcfServiceHotelManager\WcfServiceHotelManager\obj\Debug\WcfServiceHotelManager.csproj.CoreCompileInputs.cache
+D:\Bt\WcfServiceHotelManager\WcfServiceHotelManager\obj\Debug\WcfServiceHotelManager.dll
+D:\Bt\WcfServiceHotelManager\WcfServiceHotelManager\obj\Debug\WcfServiceHotelManager.pdb
+D:\Bt\LTTH\WcfServiceHotelManager\WcfServiceHotelManager\bin\WcfServiceHotelManager.dll.config
+D:\Bt\LTTH\WcfServiceHotelManager\WcfServiceHotelManager\bin\WcfServiceHotelManager.dll
+D:\Bt\LTTH\WcfServiceHotelManager\WcfServiceHotelManager\bin\WcfServiceHotelManager.pdb
+D:\Bt\LTTH\WcfServiceHotelManager\WcfServiceHotelManager\obj\Debug\WcfServiceHotelManager.csprojAssemblyReference.cache
+D:\Bt\LTTH\WcfServiceHotelManager\WcfServiceHotelManager\obj\Debug\WcfServiceHotelManager.csproj.CoreCompileInputs.cache
+D:\Bt\LTTH\WcfServiceHotelManager\WcfServiceHotelManager\obj\Debug\WcfServiceHotelManager.dll
+D:\Bt\LTTH\WcfServiceHotelManager\WcfServiceHotelManager\obj\Debug\WcfServiceHotelManager.pdb

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WcfServiceHotelManager.Entity" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfServiceHotelManager.Entity" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfphong">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="phong" nillable="true" type="tns:phong" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfphong" nillable="true" type="tns:ArrayOfphong" />
+  <xs:complexType name="phong">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_lp" type="xs:int" />
+      <xs:element minOccurs="0" name="LoaiPhong" nillable="true" type="tns:loaiPhong" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+      <xs:element minOccurs="0" name="Trangthai" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="phong" nillable="true" type="tns:phong" />
+  <xs:complexType name="loaiPhong">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Gia" type="xs:double" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Mota" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SoNguoi" type="xs:int" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="loaiPhong" nillable="true" type="tns:loaiPhong" />
+  <xs:complexType name="chitietdatphong">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id_p" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_pdp" type="xs:int" />
+      <xs:element minOccurs="0" name="Phieudatphong" nillable="true" type="tns:phieudatphong" />
+      <xs:element minOccurs="0" name="Phong" nillable="true" type="tns:phong" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="chitietdatphong" nillable="true" type="tns:chitietdatphong" />
+  <xs:complexType name="phieudatphong">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_kh" type="xs:int" />
+      <xs:element minOccurs="0" name="Khachhang" nillable="true" type="tns:khachhang" />
+      <xs:element minOccurs="0" name="Ngayden" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Ngaydi" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Songuoi" type="xs:int" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+      <xs:element minOccurs="0" name="Tiendatcoc" type="xs:double" />
+      <xs:element minOccurs="0" name="Tinhtrang" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="phieudatphong" nillable="true" type="tns:phieudatphong" />
+  <xs:complexType name="khachhang">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cmt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Gioitinh" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Hoten" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Sdt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="khachhang" nillable="true" type="tns:khachhang" />
+  <xs:complexType name="ArrayOfchitietdichvu">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="chitietdichvu" nillable="true" type="tns:chitietdichvu" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfchitietdichvu" nillable="true" type="tns:ArrayOfchitietdichvu" />
+  <xs:complexType name="chitietdichvu">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Dichvu" nillable="true" type="tns:dichvu" />
+      <xs:element minOccurs="0" name="Id_dv" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_pdp" type="xs:int" />
+      <xs:element minOccurs="0" name="Phieudatphong" nillable="true" type="tns:phieudatphong" />
+      <xs:element minOccurs="0" name="Soluong" type="xs:int" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="chitietdichvu" nillable="true" type="tns:chitietdichvu" />
+  <xs:complexType name="dichvu">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Donvitinh" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Gia" type="xs:double" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_ldv" type="xs:int" />
+      <xs:element minOccurs="0" name="Loaidichvu" nillable="true" type="tns:loaidichvu" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="dichvu" nillable="true" type="tns:dichvu" />
+  <xs:complexType name="loaidichvu">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Hesogia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Loai" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="loaidichvu" nillable="true" type="tns:loaidichvu" />
+  <xs:complexType name="ArrayOfdichvu">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="dichvu" nillable="true" type="tns:dichvu" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfdichvu" nillable="true" type="tns:ArrayOfdichvu" />
+  <xs:complexType name="ArrayOfloaidichvu">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="loaidichvu" nillable="true" type="tns:loaidichvu" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfloaidichvu" nillable="true" type="tns:ArrayOfloaidichvu" />
+</xs:schema>

@@ -38,6 +38,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,6 +51,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\LoginService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\PhongService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="data\Connectsql.cs" />
     <Compile Include="data\dataPhong.cs" />
     <Compile Include="data\Login.cs" />
@@ -186,6 +198,44 @@
     <EmbeddedResource Include="UserForm\TrangThaiPhong.resx">
       <DependentUpon>TrangThaiPhong.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Connected Services\LoginService\LoginApi.wsdl" />
+    <None Include="Connected Services\LoginService\LoginApi.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\LoginService\LoginApi1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\LoginService\LoginApi2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\LoginService\QuanLyKhachSan.LoginService.account.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PhongService\phongApi.wsdl" />
+    <None Include="Connected Services\PhongService\phongApi.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PhongService\phongApi1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PhongService\phongApi2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\PhongService\QuanLyKhachSan.PhongService.chitietdatphong.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PhongService\QuanLyKhachSan.PhongService.chitietdichvu.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PhongService\QuanLyKhachSan.PhongService.dichvu.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PhongService\QuanLyKhachSan.PhongService.loaidichvu.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\PhongService\QuanLyKhachSan.PhongService.phong.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -200,6 +250,20 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\LoginService\LoginApi.disco" />
+    <None Include="Connected Services\LoginService\configuration91.svcinfo" />
+    <None Include="Connected Services\LoginService\configuration.svcinfo" />
+    <None Include="Connected Services\LoginService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\PhongService\phongApi.disco" />
+    <None Include="Connected Services\PhongService\configuration91.svcinfo" />
+    <None Include="Connected Services\PhongService\configuration.svcinfo" />
+    <None Include="Connected Services\PhongService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Icon\121.ico" />
     <Content Include="Icon\146.png" />
     <Content Include="Icon\54.ico" />
@@ -281,6 +345,13 @@
     <Content Include="Icon\user_48.png" />
     <Content Include="Icon\user_add_481.png" />
     <Content Include="Icon\vault.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\LoginService\" />
+    <WCFMetadataStorage Include="Connected Services\PhongService\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

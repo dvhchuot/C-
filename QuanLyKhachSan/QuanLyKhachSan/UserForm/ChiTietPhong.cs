@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using QuanLyKhachSan.PhongService;
 namespace QuanLyKhachSan.UserForm
 {
     public partial class ChiTietPhong : Form
@@ -18,60 +18,61 @@ namespace QuanLyKhachSan.UserForm
         public ChiTietPhong()
         {
             InitializeComponent();
+            
         }
 
 
         public static string Maphong;
-        public string mapdp;
+        public int idpdp;
+        public static int idP;
 
 
         private void bt_capnhat_Click(object sender, EventArgs e)
         {
             DichVuTungPhong.maPhong = Maphong;
-            DichVuTungPhong.maPdp = mapdp;
+            DichVuTungPhong.maPdp = idpdp.ToString();
+            DichVuTungPhong.idP = idP;
+            DichVuTungPhong.idPdp = idpdp;
             DichVuTungPhong dvtp = new DichVuTungPhong();
             dvtp.ShowDialog();
         }
+        public void load()
+        {
+            IphongApiClient client = new IphongApiClient();
+            try
+            {
+                chitietdatphong chitiet = client.getPhongById(idP);
+                lb_tenp.Text = chitiet.Phong.Name;
+                lb_lp.Text = chitiet.Phong.LoaiPhong.Mota;
+                lp_gp.Text = chitiet.Phong.LoaiPhong.Gia.ToString();
+                txt_songuoidp.Text = chitiet.Phieudatphong.Songuoi.ToString() + "/" + chitiet.Phong.LoaiPhong.SoNguoi.ToString();
+                txt_ten.Text = chitiet.Phieudatphong.Khachhang.Hoten;
+                txt_sdt.Text = chitiet.Phieudatphong.Khachhang.Sdt;
+                txt_socm.Text = chitiet.Phieudatphong.Khachhang.Cmt;
 
+                txt_ngayden.Text = chitiet.Phieudatphong.Ngayden.ToString();
+                rd_kt.Checked = true;
+
+
+                idpdp = chitiet.Id_pdp;
+            }
+            catch
+            {
+                MessageBox.Show("Xảy ra lỗi mời thử lại");
+                //this.Hide();
+            }
+        }
         private void ChiTietPhong_Load(object sender, EventArgs e)
         {
-            SqlConnection kn = new SqlConnection(Connectsql.connectionsql);
-            //SqlConnection kn = new SqlConnection(@"Data Source = DESKTOP-BIBNN55\SQLEXPRESS;Initial Catalog = KHACHSAN; Integrated Security = True");
-            kn.Open();
+            load();
             
-            
-                string sql = " SELECT p.MA_P,P.MA_LP,LP.GIA,LP.SONGUOI,KH.HOTEN,KH.SDT,KH.CMT,PDP.SONGUOI,PDP. NGAYDEN ,PDP.MA_PDP FROM dbo.khachhang AS KH, dbo.chitietdatphong AS  CTDP, dbo.phieudatphong AS PDP,phong AS P,loaiphong AS LP WHERE KH.MA_KH = PDP.MA_KH AND PDP.MA_PDP = CTDP.MA_PDP AND P.MA_P = '" + Maphong + "' AND P.MA_LP = LP.MA_LP AND P.MA_P = CTDP.MA_P AND PDP.TINHTRANG='waitting' ";
-                //MessageBox.Show(sql);
-
-                SqlCommand commandsql = new SqlCommand(sql, kn);
-
-                SqlDataAdapter com = new SqlDataAdapter(commandsql);
-                DataTable data = new DataTable();
-                com.Fill(data);
-                DataRow dr = data.Rows[0];
-                lb_tenp.Text = dr.ItemArray[0].ToString();
-                lb_lp.Text = dr.ItemArray[1].ToString();
-                lp_gp.Text = dr.ItemArray[2].ToString();
-                txt_songuoidp.Text = dr.ItemArray[7].ToString() + "/" + dr.ItemArray[3].ToString();
-                txt_ten.Text = dr.ItemArray[4].ToString();
-                txt_sdt.Text = dr.ItemArray[5].ToString();
-                txt_socm.Text = dr.ItemArray[6].ToString();
-                
-                txt_ngayden.Text = dr.ItemArray[8].ToString();
-                rd_kt.Checked = true;
-                
-                mapdp= dr.ItemArray[9].ToString();
-
-
-
-
-
 
         }
 
         private void bt_tinhtien_Click(object sender, EventArgs e)
         {
-            HoaDon.mapdp = mapdp;
+            HoaDon.mapdp = idpdp.ToString();
+            HoaDon.idpdp = idpdp;
             HoaDon hoaDon = new HoaDon();
             this.Hide();
             hoaDon.ShowDialog();

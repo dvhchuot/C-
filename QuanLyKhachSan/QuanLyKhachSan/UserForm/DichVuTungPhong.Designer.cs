@@ -35,8 +35,6 @@
             this.bt_lu = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.lb_mp = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txt_madv = new System.Windows.Forms.TextBox();
             this.tb_dvp = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.tb_dv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_dvp)).BeginInit();
@@ -125,27 +123,6 @@
             this.lb_mp.TabIndex = 8;
             this.lb_mp.Text = "label1";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label1.Location = new System.Drawing.Point(362, 158);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 20);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "Mã DV";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // txt_madv
-            // 
-            this.txt_madv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_madv.Location = new System.Drawing.Point(458, 155);
-            this.txt_madv.Name = "txt_madv";
-            this.txt_madv.Size = new System.Drawing.Size(55, 26);
-            this.txt_madv.TabIndex = 24;
-            this.txt_madv.TextChanged += new System.EventHandler(this.txt_madv_TextChanged);
-            // 
             // tb_dvp
             // 
             this.tb_dvp.AllowUserToAddRows = false;
@@ -165,8 +142,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(968, 415);
             this.Controls.Add(this.tb_dvp);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txt_madv);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txt_sl);
             this.Controls.Add(this.tb_dv);
@@ -193,8 +168,6 @@
         private System.Windows.Forms.Button bt_lu;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lb_mp;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txt_madv;
         private System.Windows.Forms.DataGridView tb_dvp;
     }
 }
